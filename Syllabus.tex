@@ -1,0 +1,405 @@
+\documentclass[10pt]{article}
+\usepackage[left=.60in,right=.60in,top=1in, bottom=.9in, nohead]{geometry}
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{setspace,amssymb,amsmath,url,longtable}
+\usepackage{enumitem}
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{8pt}{*0}{*0}
+\titlespacing{\subsection}{5pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+%\setlength{\textwidth}{17cm}
+%\setlength{\textheight}{23.5cm}
+
+\newenvironment{itemize*}{
+\begin{itemize}[leftmargin=1em,noitemsep,nolistsep]
+}{\end{itemize}}
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Times New Roman}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+\def\thesection{\Alph{section}}
+
+\begin{document}
+  \begin{center}
+  	{\large\textbf{COURSE SYLLABUS}}\\
+  \end{center}
+	\begin{tabular}{l l l l}
+		\textbf{Course Number:} & CS179.14B\\
+		\textbf{Title:} & \multicolumn{3}{l}{Special Topics in Multimedia: PC and Console Game Development II}\\
+		\textbf{Department/Program:} & DISCS & \textbf{School:} & School of Science and Engineering\\
+		\textbf{Semester:} & 2\textsuperscript{nd} & \textbf{School Year:} & 2015-2016\\
+		\textbf{Instructor/s:} & \multicolumn{3}{l}{Wilhansen Joseph B. Li <\url{wil+cs179.14b@byimplication.com}>} \\
+		\textbf{Course Website:} & \multicolumn{3}{l}{\url{http://http://moodle.ateneo.edu/ls/course/view.php?id=736}}
+	\end{tabular}
+
+May 21
+\section{COURSE DESCRIPTION}
+The course focuses on the fundamentals of PC game programming continuing from CS179.14a. Students will learn how to build a game from scratch in order to gain a deep understanding of their architecture and components, as opposed to using a pre-made game-making software. The format of the lesson will be a mix of lectures followed-by hands-on implementation. By the end of the semester, the students should be able to produce a networked multiplayer game.
+
+\section{COURSE OBJECTIVES}
+At the end of the course, students should:
+\begin{itemize}[noitemsep]
+\item structure games with appropriate tradeoffs between speed and maintainability.
+\item be able to prototype gameplay in a short amount of time.
+\item know various architectures and apply them to make their game scale.
+\item design protocols to communicate game state for multiplayer games.
+\end{itemize}
+
+\section{COURSE OUTLINE AND TIME FRAME}
+The instructor reserve the right to make adjustments to the course outline as he deems fit.
+\begin{longtable}{||p{1.8in}|p{2.4in}|p{1.3in}|p{1in}||}
+\hline
+\textbf{Week and Topic} & \textbf{Learning Objectives} & \textbf{Activities} & \textbf{Student Output} \\ \hline
+
+\textbf{1-2: Advanced C++}	\begin{itemize*}
+		\item Operator Overloading
+		\item Polymorphism
+		\item Constructors, Copy Constructors, Destructors
+		\item Templates
+		\item Smart Pointers
+		\item Multiple Inheritance
+		\item Virtual Inheritance
+	\end{itemize*} & \begin{itemize*}
+		\item Know how to implement operator overloading.
+		\item Implement pure virtual functions.
+		\item Create generic functions and classes
+		\item Use smart pointers to minimize programming errors.
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Homework
+	\end{itemize*} & C++ Program \\ \hline
+\textbf{3-4: Program Structure and Object Generation} 
+	\begin{itemize*}
+		\item Update method
+		\item Object Generation
+		\item Object Pool
+		\item Service Locator
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Write a SHMUP
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Homework
+	\end{itemize*} & Top-down Shoot-em-up \\ \hline
+\textbf{5-7: Networking}
+	\begin{itemize*}
+		\item Addresses
+		\item TCP vs. UDP
+		\item Multicasting and Broadcasting
+		\item Peer Discovery
+		\item MTU
+		\item Packet Reordering
+		\item NAT Punchthrough
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Discover Peers
+		\item Transmit data over UDP
+		\item Deal with missing packets
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Homework
+	\end{itemize*} & Networked Program\\ \hline
+\textbf{8: Networked Physics}
+	\begin{itemize*}
+		\item Lockstepping
+		\item Dead Reckoning
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Simulate physics using transmitted data
+		\item Deal with missing packets
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Homework
+	\end{itemize*} & Multiplayer Bouncy Balls\\ \hline
+\textbf{9-10: Matrices} 
+	\begin{itemize*}
+		 \item Definition
+		 \item Operations
+		 \item Inverses
+		 \item Orthogonal Matrices
+		 \item Application
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Perform Matrix Multiplication
+		\item Invert Matrices
+		\item Factorize Matrices
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Quiz
+	\end{itemize*} & Recitation and Quiz\\ \hline
+\textbf{11-12: Interpolation}
+	\begin{itemize*}
+		\item Interpolation definition
+		\item Function manipulations
+		\item Continuity and differentiability
+		\item B\'ezier Curves
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Manipulate functions to fit interpolation requirements
+		\item Use interpolations to smoothen animations.
+		\item Fit more complex data data
+	\end{itemize*} & 
+	\begin{itemize*}
+		\item Lecture
+		\item Homework
+	\end{itemize*} Quiz &
+	Interpolation library
+		\\ \hline
+\textbf{13: Input and Character Control} 
+	\begin{itemize*}
+		\item Keyboard and mouse input
+		\item Gamepad input
+		\item Character control/physics
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Query for keyboard and mouse input
+		\item Query for gamepad support and input
+		\item Create a basic 2D platformer
+	\end{itemize*} & 
+	\begin{itemize*}
+		\item Lecture
+		\item Hands-on
+	\end{itemize*} & 2D platformer \\ \hline
+\textbf{14: Event Systems}
+	\begin{itemize*}
+		\item Observer pattern
+		\item Generic Observer
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Create an event system
+		\item Integrate the event system into the entity framework
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Hands-on exercise
+	\end{itemize*} & Event system\\ \hline
+\textbf{15: Configuration Management}
+	\begin{itemize*}
+		\item Windows Registry
+		\item Windows user and application directories
+		\item Configuration files (INI, XML, JSON)
+		\item String parsing
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Read and write from the registry.
+		\item Know the proper directories to store configuration
+		\item Generate and parse configuration files
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Hands-on
+	\end{itemize*} & Configuration framework \\ \hline
+\textbf{16-17: Complex Numbers and Quaternions}
+	\begin{itemize*}
+		\item Complex Numbers
+		\item Quaternions
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Compute product of complex numbers and quaternions
+		\item Apply 2D rotation using complex numbers
+		\item Apply 3D rotation using quaternions
+	\end{itemize*} &
+	\begin{itemize*}
+		\item Lecture
+		\item Quiz
+	\end{itemize*} & Quiz \\ \hline
+\textbf{18: Finals} & Application of lessons & Project \\ \hline
+\end{longtable}
+
+$^\dagger$Will be taken when there is enough time.
+
+\section{REQUIRED READING}
+Any one of the following will suffice:
+\begin{itemize}[noitemsep,nolistsep]
+\item Game Engine Architecture, by Jason Gregory, Jeff Lander and Matt Whiting, A K Peters (ISBN-13: 978-1568814131), 2009
+\item Game Programming Patterns by Robert Nystrom (ISBN-13: 978-0990582908), 2014 (available online for free at \url{http://gameprogrammingpatterns.com})
+\item Game Networking \url{http://gafferongames.com/networking-for-game-programmers/}
+\item Beej's Guide to Network Programming \url{http://beej.us/guide/bgnet/}
+\end{itemize}
+
+\section{SUGGESTED READINGS AND RESOURCES}
+\begin{enumerate}[noitemsep]
+\item Courseware (for announcements, quizzes, etc.): \url{http://http://moodle.ateneo.edu/ls/course/view.php?id=736}
+\item Syllabus: \url{https://github.com/CS179-14B-2015-2016/syllabus}
+\item Course Github Organization: \url{https://github.com/CS179-14B-2015-2016}
+\item Ten C++11 Features Every C++ Developer Should Use \\\url{http://www.codeproject.com/Articles/570638/Ten-Cplusplus-Features-Every-Cplusplus-Developer}
+\item C++Now 2014 Presentations \url{https://github.com/boostcon/cppnow_presentations_2014}
+\item Game Programming Gems series
+\item Game Engine Gems series
+\item Glenn Fiedler's Game Development Articles and Tutorials: \url{http://gafferongames.com/}
+\item The Witness: \url{http://the-witness.net/news/}
+\item Wolfire Games Blog: \url{http://blog.wolfire.com/}
+\item Gamasutra: \url{http://www.gamasutra.com/}
+\item Game Physics by David H. Eberly, Morgan Kaufmann
+\item Thinking in C\textsuperscript{++} 2\textsuperscript{nd} Ed. (Eckel, Bruce): \\\url{http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html}
+\item C\textsuperscript{++} FAQ lite: \url{http://www.parashift.com/c++-faq-lite/}
+\item What Every Computer Scientist Should Know About Floating-Point Arithmetic: \url{http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html}
+\item A Primer on Bézier Curves \url{http://pomax.github.io/bezierinfo}
+\item Standard C\textsuperscript{++} \url{https://isocpp.org/}
+\end{enumerate}
+
+\section{COURSE REQUIREMENTS}
+\begin{center}
+\begin{tabular}{rl}
+5\% & Project Proposal\\
+20\% & (non-final) Project Milestones\\
+15\% & Final Project Milestone\\
+15\% & Class Participation/Recitation\\
+20\% & Final Project\\
+25\% & Quizzes and Homework\\
+\end{tabular}
+\end{center}
+
+\subsection{Class Participation/Recitation}
+\begin{enumerate}[noitemsep]
+\item Each recitation is worth 3\% (out of the total 15\%).
+\item Depending on your answer, the grade per recitation can drop.
+\item There's no limit on how much you can recite.
+\item The recitation will be totaled in the end to compute the class participation grade.
+\item You may be called after a homework to present it in class. The presentation would last a maximum of 20 minutes and is worth 4\%. The process (architectural decisions, bugs encountered, debugging process and solution) of making the game should be explained. Only the game is needed for presentation; no keynotes allowed.
+\item Excess points are spilled over to other components based on the following formula:
+$$
+\log_2(x + 1)
+$$
+where $x$ is the recitation points in excess of 15.
+\end{enumerate}
+
+\subsection{Project}
+\begin{enumerate}[noitemsep]
+\item The output will be an application of the lessons learned in the course.
+\item The project need not be original. Just make sure that you cite your source(s), know what you're doing and don't blatantly copy-paste. Remember, the project defense has a heavier weight than your project.
+\item The project need not have original art, you may get artwork from resources from the internet. Be sure to cite your sources.
+\item Submit the Group Certificate of Authorship, stating all resources and references used (except for the references listed here), together with the project or during defense. Failure to do so will mean a 0 for the project.
+\item Do not plagiarize. Offenders will be dealt severely.
+\item Project grade breakdown:
+\begin{center}
+\begin{tabular}{rl}
+3\% & Submission\\
+2\% & Proper usage of git\\
+3\% & Persistence\\
+3\% & ``Data-driven''-ness\\
+5\% & Networking\\
+4\% & Polish\\
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\subsection{Project Consultation}
+\begin{enumerate}[noitemsep]
+\item The project consultation is an (admittedly futile) attempt to get people moving on their projects.
+\item The project consultation is four parts, contributing 5\% each, one every end of month.
+\item Failure to do the consultation before the deadline will result in a 0 for the component.
+\end{enumerate}
+
+\subsection{Project Proposal}
+\begin{enumerate}[noitemsep]
+\item The project proposal is to be submitted at the first project milestone deadline.
+\item It is to be maintained until the finals.
+\item The evolution of the document should be noted, either by Git, or by other means (Google docs, multiple MS Word files, etc.)
+\item It should accurately reflect the current game.
+\end{enumerate}
+
+\subsection{Project Defense}
+Project defenses are 1.5 hours each. Each member should prepare in detail their contribution to a project and be prepared to be questioned. If a question is directed at an individual, \emph{others may not interrupt; failure to comply counts as not answering the question}. 
+
+There is no dress code for project defenses but at least dress properly.
+
+Final Defense grade breakdown:
+\begin{center}
+\begin{tabular}{rl}
+5\% & Presentation\\
+10\% & Contribution\\
+\end{tabular}
+\end{center}
+
+\subsection{Quizzes and Homework}
+\begin{enumerate}[noitemsep]
+\item Quizzes are usually unannounced.
+\item Quizzes will be given at the start of the class. Latecomers may only catch up.
+\item Quizzes are to be written on a A4 bond paper or posted on Moodle.
+\item Although not necessary, non-graphing calculators may be used in quizzes.
+\item A decent skill on arithmetic and geometry (including trigonometry) is expected.
+\item Expect quizzes when a reading assignment is given.
+\item Expect homework to come every week.
+\item There will be no quiz on the week when a homework is due except when it is a moved deadline.
+\item Homework either culminates the activities during class time or puts the students in a situation where they have to discover things. They are to be done by group.
+\item Homework are graded on the scale of 0 to 4. (4 is only given for exceptional work)
+\end{enumerate}
+
+\subsection{Hands-on Exercises}
+Hands-on exercises are meant to enhance learning by putting theory into guided practice. These are not graded because I believe that grading them while preventing cheating is a futile effort and a waste of time. As such, it is to the student's discretion whether or not to do the hands-on exercises. Be forewarned though that 1) some homework may rely on the exercises and 2) there may be exam questions that are based on the exercises.
+
+\subsection{Submissions}
+All works (homework and final project) should be submitted via Github using the following protocol: (taken from \url{https://education.github.com/guide/forks}):
+\begin{enumerate}[noitemsep]
+	\item Fork the original repository (there will be one per homework).
+	\item Clone the repository to your computer.
+	\item Modify the files and commit changes to complete your solution (add project comments in the provided README.md file).
+	\item Push/sync the changes up to GitHub.
+	\item For any member of the group, create a pull request on the original repository to turn in the assignment.
+	\item State your group name in the pull request title.
+\end{enumerate}
+
+
+\subsection{Late Submissions}
+The score for late submissions will be reduced by 15\% for every hour, or fraction thereof, late. (i.e. score is multiplied by $\max(0.15h,0)$ where $h$ is the number of hours late rounded up)
+
+\subsection{Bonuses}
+\begin{itemize}[noitemsep]
+
+\item Up to 8\% will be credited for contributions to any FOSS projects during the semester.
+	\begin{itemize}[noitemsep]
+		\item Multiple contributions will be amalgamated and the total bonus shall not exceed 10\%.
+		\item Deadline for notifications of contributions will be on the last day, 23:59, of the finals week.
+		\item Documentation revisions are considered but will not guarantee bonuses. Do not expect bonuses for trivial corrections such as spelling or grammatical corrections.
+		\item Pending or unaccepted submissions are considered but will not guarantee bonuses.
+		\item Wikipedia edits are not considered.
+		\item For bonuses that are needed to in order pass the class, only game-related contributions are accepted (i.e. one cannot contribute to a Ruby on Rails project to pass the class).
+	\end{itemize}
+\item Bonuses are added to the final grade.
+\item Bonuses are privileges, not rights. As such, crediting them is up to the instructor's discretion.
+\end{itemize}
+
+\section{GRADING SYSTEM}
+\begin{center}
+	\begin{tabular}{rll|rll}
+	{[}92\%,100\%] & A & Excellent & 	{[}69\%,75\%) & C & Sufficient\\
+	{[}87\%,92\%) & B+ & Very Good &			{[}60\%, 69\%) & D & Passing\\
+	{[}80\%,87\%) & B & Good & 			< 60\% & F & Failure\\
+	{[}75\%,80\%) & C+ & Satisfactory \\
+	\end{tabular}
+\end{center}
+Note: $[a,b)$ means a half-open interval that includes $a$ but excludes $b$. Rounding is done only in the final grade to two decimal places.
+
+\section{CLASSROOM POLICIES}
+The class atmosphere will be relaxed but still orderly. The golden rule here is to respect the instructor and not distract others.
+\begin{enumerate}[noitemsep]
+\item Usually, thursday is the ``lesson implementation'' time.
+\item Foods and drinks (except water) are prohibited inside the lab.
+\item Attendances will not be checked however, they will be noted (i.e. you will be judged).
+\item You are responsible for your absences.
+\item If you are running late, don't storm or waltz in the classroom.
+\item Permission is not needed to leave the classroom but do so discreetly (i.e. don't rage quit).
+\item Cellphone usage is allowed during non-exam class times as long as it is used discreetly.
+\item Collaboration on homework, including the problem set, is allowed. However, \emph{copying is strictly prohibited}.
+\item Those committing academic dishonesty should be ready face the infinity + 1 banhammer from the department.
+\item Excessive noise will not be tolerated.
+\item Computers and laptops may freely be used. However, I will not repeat lessons due to divided attention brought about by social networking sites and games.
+\item Students are expected to learn C/C\textsuperscript{++} on their own. Questions on the language may be asked during consultation hours.
+\item No make-up quizzes. No make-up midterms or homework deadline extension unless you were hospitalized, an immediate member of your family died (grandparents included), or you are whisked away due to some competition. Adequate proof must be provided (e.g. medical certificate, ADSA notice) and the instructor must be notified as soon as possible.
+\end{enumerate}
+
+\section{Consultation Hours}
+By appointment. If you set an appointment with me, keep it or inform me a.s.a.p. if you cannot make it. You may also email me by the email address stated in this syllabus or by my Ateneo email address. Class-related emails sent to any other email addresses will be ignored.
+\end{document}
